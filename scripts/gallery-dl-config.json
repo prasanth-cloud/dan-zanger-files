@@ -1,0 +1,28 @@
+{
+  "extractor": {
+    "twitter": {
+      "cookies": null,
+      "retweets": false,
+      "quoted": true,
+      "replies": false,
+      "text-tweets": false,
+      "cards": false,
+      "directory": ["{category}", "{user[name]}"],
+      "filename": "{tweet_id}_{num:>02}.{extension}",
+      "postprocessors": [
+        {
+          "name": "metadata",
+          "mode": "json"
+        }
+      ]
+    }
+  },
+  "downloader": {
+    "rate": "2M",
+    "retries": 3
+  },
+  "output": {
+    "mode": "terminal",
+    "progress": true
+  }
+}
